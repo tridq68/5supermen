@@ -36,7 +36,10 @@ function sendMessage(message) {
     {
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzLrXDyMDYH8hIL_0E9V5_LZA9VNyc51T47ME_m_ql43XYMpA_oPI_WRATKjLzM-KQWTQ/exec'
         var formData = new FormData();
+        var today = new Date();
         formData.append('BirthDay', message);
+        formData.append('Time', today);
+
 
         fetch(scriptURL, {
             method: 'POST',
